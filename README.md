@@ -3,9 +3,12 @@
 [Fix file](prisma/migrations/0_init/migration.sql)
 
 ```bash
-mkdir prisma/migrations/0_init
 rm prisma/schema.prisma
-wget -O prisma/migrations/0_init/migration.sql https://raw.githubusercontent.com/prisma/prisma-examples/latest/typescript/rest-nextjs-prisma-mysql/prisma/migrations/0_init/migration.sql
+rm -rf prisma/migrations/
+mkdir prisma/migrations/
+mkdir prisma/migrations/0_init/
+wget -O prisma/migrations/0_init/migration.sql https://raw.githubusercontent.com/florianamette/toto/refs/heads/main/prisma/migrations/0_init/migration.sql
+wget -O prisma/schema.prisma https://raw.githubusercontent.com/florianamette/toto/refs/heads/main/prisma/schema.prisma
 npx prisma migrate resolve --applied 0_init
 ```
  
